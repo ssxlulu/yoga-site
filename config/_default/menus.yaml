@@ -11,7 +11,7 @@ main:
     hasChildren: true
   - parent: Catalog
     name: Luxury Yoga Mat
-    url: luxuryyogamat/
+    url: catalog/luxuryyogamat/
     weight: 30
   - parent: Catalog
     name: Foldable Yoga Mat
