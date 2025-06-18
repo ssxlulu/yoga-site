@@ -11,12 +11,13 @@ appearance:
 # SEO
 marketing:
   seo:
-    site_type: Person
+    site_type: OnlineBusiness
     local_business_type: ''
     org_name: ''
-    description: 'A highly-customizable Hugo landing page theme powered by Hugo Blox website builder.'
-    twitter: 'GetResearchDev'
+    description: 'LuluYoga - Yoga Mats From The East | Professional & Well-designed'
+    twitter: ''
   analytics:
+    # e.g. G-12345
     google_analytics: ''
     baidu_tongji: ''
     plausible: ''
@@ -39,17 +40,23 @@ header:
       filename: "logo.svg"
     button:
       enable: true
-      text: "Get Started"
+      text: "Buy Now"
       url: "https://hugoblox.com/templates/"
     show_search: true
     show_theme_chooser: true
+    # Show a language chooser (if you have translated your site content)?
+    # show_translations: false
+    # If `show_translations` is enabled, do you wish to hide the current language name?
+    # hide_language_name: false
 
 # Site footer
 footer:
   copyright:
-    notice: '© {year} My Company'
+    notice: '© {year} LuluYoga. '
+  # For multilingual sites, show a language chooser in the footer?
+  # show_translations: true
 
 # Localization
 locale:
-  date_format: 'Jan 2, 2006'
-  time_format: '3:04 PM'
+  date_format: 'Jan 18, 2025'
+  time_format: '15:04 PM'

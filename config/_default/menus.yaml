@@ -6,15 +6,31 @@ main:
   - name: Home
     url: /#top
     weight: 10
-  - name: Features
-    url: /#features
+  - name: Catalog
     weight: 20
-  - name: Solutions
-    url: /#solutions
+    hasChildren: true
+  - parent: Catalog
+    name: Luxury Yoga Mat
+    url: luxuryyogamat/
     weight: 30
-  - name: Resources
+  - parent: Catalog
+    name: Foldable Yoga Mat
+    url: foldableyogamat/
     weight: 40
+  - parent: Catalog
+    name: Artistic Travel Yoga Mat
+    url: artistictravelyogamat/
+    weight: 50
+  - name: About Us
+    url: aboutus/
+    weight: 80
+  - name: Resources
+    weight: 60
     hasChildren: true
   - parent: Resources
     name: Blog
     url: blog/
+    weight: 70
+  - name: Contact
+    url: contact/
+    weight: 90
