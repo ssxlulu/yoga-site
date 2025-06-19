@@ -1,0 +1,84 @@
+{{/*
+  Hugo Blox Contact Blox
+  官方规范实现，自动渲染 front matter 配置的联系方式、地址、办公时间、社交链接等。
+  文档：https://docs.hugoblox.com/blocks/contact/
+*/}}
+<section class="contact-blox py-12 px-4 max-w-2xl mx-auto">
+  <h2 class="text-3xl font-bold mb-4">{{ .content.title | default "Contact" }}</h2>
+  {{ with .content.subtitle }}<p class="mb-2 text-lg">{{ . }}</p>{{ end }}
+  {{ with .content.text }}<p class="mb-4">{{ . }}</p>{{ end }}
+  <div class="mb-6 space-y-2">
+    {{ with .content.email }}
+      <div><strong>Email:</strong> <a href="mailto:{{ . }}">{{ . }}</a></div>
+    {{ end }}
+    {{ with .content.phone }}
+      <div><strong>Phone:</strong> <a href="tel:{{ . }}">{{ . }}</a></div>
+    {{ end }}
+    {{ with .content.address }}
+      <div><strong>Address:</strong> {{ .street }}, {{ .city }}, {{ .region }} {{ .postcode }}, {{ .country }}</div>
+    {{ end }}
+    {{ with .content.directions }}
+      <div><strong>Directions:</strong> {{ . }}</div>
+    {{ end }}
+    {{ with .content.office_hours }}
+      <div><strong>Office Hours:</strong>
+        <ul class="ml-4 list-disc">
+          {{ range . }}<li>{{ . }}</li>{{ end }}
+        </ul>
+      </div>
+    {{ end }}
+    {{ with .content.contact_links }}
+      <div class="flex flex-wrap gap-2">
+        {{ range . }}
+          <a href="{{ .link }}" class="inline-flex items-center px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">
+            <i class="{{ .icon_pack }} fa-{{ .icon }} mr-2"></i>{{ .name }}
+          </a>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+  {{ with .content.form.provider }}
+    {{ if eq . "netlify" }}
+      <form name="contact" method="POST" netlify class="space-y-4">
+        <input type="hidden" name="form-name" value="contact">
+        <div>
+          <label class="block mb-1 font-medium" for="name">Name</label>
+          <input class="w-full border rounded px-3 py-2" type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label class="block mb-1 font-medium" for="email">Email</label>
+          <input class="w-full border rounded px-3 py-2" type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label class="block mb-1 font-medium" for="message">Message</label>
+          <textarea class="w-full border rounded px-3 py-2" id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700" type="submit">Send</button>
+      </form>
+    {{ else if eq . "formspree" }}
+      <form action="https://formspree.io/f/{{ .content.form.formspree.id }}" method="POST" class="space-y-4">
+        <div>
+          <label class="block mb-1 font-medium" for="name">Name</label>
+          <input class="w-full border rounded px-3 py-2" type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label class="block mb-1 font-medium" for="email">Email</label>
+          <input class="w-full border rounded px-3 py-2" type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label class="block mb-1 font-medium" for="message">Message</label>
+          <textarea class="w-full border rounded px-3 py-2" id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700" type="submit">Send</button>
+      </form>
+    {{ end }}
+  {{ end }}
+  {{ with .content.coordinates }}
+    <div class="mt-6">
+      <iframe width="100%" height="250" frameborder="0" style="border:0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox={{ .longitude }},{{ .latitude }},{{ .longitude }},{{ .latitude }}&amp;layer=mapnik"
+        allowfullscreen>
+      </iframe>
+    </div>
+  {{ end }}
+</section>
