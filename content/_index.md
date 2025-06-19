@@ -170,4 +170,10 @@ sections:
         # Card background color (CSS class)
         css_class: "bg-primary-700"
         css_style: ""
+  - block: markdown
+    content:
+      title: My title
+      subtitle: My subtitle
+      text: <script async  src="https://js.stripe.com/v3/buy-button.js"></script><stripe-buy-button  buy-button-id="buy_btn_1RbboGG5nhV0g7HGnTld9Pyq"  publishable-key="pk_live_51PcjwFG5nhV0g7HGMfTHbPBJCm4AwRjRH5cLgAXH1fF8onwLP5oGp7KOy95BXNu8QXZ27ifLKscOwaLgp0gqrIAE00vrlsUpA3"></stripe-buy-button>
+
 ---
