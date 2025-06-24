@@ -15,7 +15,7 @@ sections:
       # text: 🧱 EASY. FREE (OPEN SOURCE). NO-CODE  🧱
       primary_action:
         text: View all
-        url: https://luluyoga.shop/#artisticyoagmat
+        url: https://ssxlulu.github.io/yoga-site/#artisticyoagmat
         # icon: rocket-launch
       # secondary_action:
         # text: Read the docs
@@ -24,7 +24,7 @@ sections:
         text: "Flash Sale: Up to 20% Off ! "
         link:
           text: "Buy Now"
-          url: https://luluyoga.shop/#artisticyoagmat
+          url: https://ssxlulu.github.io/yoga-site/#artisticyoagmat
     design:
       spacing:
         padding: [0, 0, 0, 0]
