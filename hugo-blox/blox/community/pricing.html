@@ -1,0 +1,28 @@
+<!--
+  Custom Pricing Blox
+  参考 content/_index.md 中的配置，渲染 title、subtitle、plans、features、按钮等。
+-->
+<section class="pricing-section">
+  <div class="container mx-auto py-12">
+    {{ with .content.title }}<h2 class="text-3xl font-bold text-center mb-2">{{ . }}</h2>{{ end }}
+    {{ with .content.subtitle }}<p class="text-center text-lg mb-8">{{ . }}</p>{{ end }}
+    <div class="flex flex-wrap justify-center gap-8">
+      {{ range .content.plans }}
+      <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8 w-full max-w-xs flex flex-col items-center border border-gray-200 dark:border-gray-700 {{ if .highlight }}ring-2 ring-primary-500{{ end }}">
+        <h3 class="text-xl font-semibold mb-2">{{ .title }}</h3>
+        <div class="text-4xl font-bold mb-1">{{ .price }}<span class="text-base font-normal">{{ .period }}</span></div>
+        <p class="mb-4 text-gray-600 dark:text-gray-300">{{ .description }}</p>
+        {{ if .highlight }}<span class="inline-block mb-2 px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-xs">{{ .highlight }}</span>{{ end }}
+        <ul class="mb-6 text-left w-full">
+          {{ range .features }}
+          <li class="flex items-center mb-2"><span class="mr-2 text-green-500">✔</span>{{ . }}</li>
+          {{ end }}
+        </ul>
+        {{ with .button }}
+        <a href="{{ .url }}" class="w-full text-center bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-4 rounded transition">{{ .text }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
