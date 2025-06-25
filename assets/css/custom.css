@@ -2,9 +2,9 @@
   position: relative;
   z-index: auto;
   margin-bottom: 2rem;
-  padding-top: 4rem;
-  padding-bottom: 2rem;
-  min-height: unset;
+  /* padding-top: 4rem; */
+  /* padding-bottom: 2rem; */
+  /* min-height: unset; */
   background-attachment: fixed;
 
 }

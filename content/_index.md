@@ -27,7 +27,7 @@ sections:
           url: https://ssxlulu.github.io/yoga-site/#artisticyoagmat
     design:
       spacing:
-        padding: ["4rem", 0, "4rem", 0]
+        padding: [0, 0, 0, 0]
         margin: [0, 0, 0, 0]
       css_class: "dark py-16 hero-block"
       background:
@@ -51,7 +51,7 @@ sections:
         url: https://luluyoga.shop/catalog/artisticyoagmat/
     design:
       spacing:
-        padding: ["4rem", 0, "4rem", 0]
+        padding: [0, 0, 0, 0]
         margin: [0, 0, 0, 0]
       css_class: "dark py-16 hero-block"
       background:
@@ -75,7 +75,7 @@ sections:
         url: https://luluyoga.shop/catalog/luxuryyogamat/
     design:
       spacing:
-        padding: ["4rem", 0, "4rem", 0]
+        padding: [0, 0, 0, 0]
         margin: [0, 0, 0, 0]
       css_class: "dark py-16 hero-block"
       background:
@@ -99,7 +99,7 @@ sections:
         url: https://luluyoga.shop/catalog/foldableyogamat/
     design:
       spacing:
-        padding: ["4rem", 0, "4rem", 0]
+        padding: [0, 0, 0, 0]
         margin: [0, 0, 0, 0]
       css_class: "dark py-16 hero-block"
       background:
