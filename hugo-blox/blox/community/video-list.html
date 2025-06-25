@@ -1,6 +1,6 @@
 <!--
   Custom Video List Blox for Hugo Blox
-  支持在 _index.md 配置 YouTube 视频列表
+  横向滑动卡片风格，简洁美观，参考 Apple 官网横滑视频列表
 -->
 {{ $block := .wcBlock | default . }}
 {{ $data := $block.content | default .Params }}
@@ -12,16 +12,34 @@
   <div class="container mx-auto">
     {{ with $title }}<h2 class="text-3xl font-bold text-center mb-2">{{ . }}</h2>{{ end }}
     {{ with $subtitle }}<p class="text-center text-lg mb-8">{{ . }}</p>{{ end }}
-    <div class="flex flex-wrap justify-center gap-8">
-      {{ range $videos }}
-      <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-4 w-full max-w-xs flex flex-col items-center border border-gray-200 dark:border-gray-700">
-        <div class="w-full aspect-video mb-3">
-          <iframe class="w-full h-48 rounded" src="https://www.youtube.com/embed/{{ .id }}" frameborder="0" allowfullscreen></iframe>
+    <div class="relative">
+      <div class="flex overflow-x-auto gap-6 pb-4 scrollbar-hide snap-x snap-mandatory">
+        {{ range $videos }}
+        <div class="relative min-w-[320px] max-w-xs snap-center group cursor-pointer">
+          <img class="w-full h-48 object-cover rounded-lg shadow-lg transition-transform group-hover:scale-105" src="https://img.youtube.com/vi/{{ .id }}/hqdefault.jpg" alt="{{ .title }}" />
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent rounded-b-lg p-4">
+            <h3 class="text-white text-lg font-semibold mb-1">{{ .title }}</h3>
+          </div>
+          {{ with .description }}
+          <div class="absolute inset-0 bg-black/70 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg p-4 text-center text-sm">
+            {{ . }}
+          </div>
+          {{ end }}
+          <a href="https://www.youtube.com/watch?v={{ .id }}" target="_blank" class="absolute inset-0 z-10" aria-label="{{ .title }}"></a>
         </div>
-        <h3 class="text-lg font-semibold mb-1 text-center">{{ .title }}</h3>
-        {{ with .description }}<p class="text-gray-600 dark:text-gray-300 text-sm text-center">{{ . }}</p>{{ end }}
+        {{ end }}
       </div>
-      {{ end }}
+      <!-- 指示圆点 -->
+      <div class="flex justify-center mt-4 gap-2">
+        {{ range $i, $v := $videos }}
+        <span class="w-2 h-2 rounded-full bg-gray-300 inline-block"></span>
+        {{ end }}
+      </div>
     </div>
   </div>
 </section>
+<style>
+/* 隐藏滚动条 */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
