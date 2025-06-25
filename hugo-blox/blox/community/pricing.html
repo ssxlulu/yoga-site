@@ -1,13 +1,22 @@
 <!--
-  Custom Pricing Blox
-  参考 content/_index.md 中的配置，渲染 title、subtitle、plans、features、按钮等。
+  Custom Pricing Blox for Hugo Blox
+  兼容 Hugo Blox section 机制，自动适配 _index.md 配置
 -->
+{{/* Hugo Blox: Pricing */}}
+{{/* 参考 contact.html 的写法，兼容 Hugo Blox block 机制 */}}
+
+{{ $block := .wcBlock | default . }}
+{{ $data := $block.content | default .Params }}
+{{ $title := $data.title }}
+{{ $subtitle := $data.subtitle }}
+{{ $plans := $data.plans }}
+
 <section class="pricing-section">
   <div class="container mx-auto py-12">
-    {{ with .content.title }}<h2 class="text-3xl font-bold text-center mb-2">{{ . }}</h2>{{ end }}
-    {{ with .content.subtitle }}<p class="text-center text-lg mb-8">{{ . }}</p>{{ end }}
+    {{ with $title }}<h2 class="text-3xl font-bold text-center mb-2">{{ . }}</h2>{{ end }}
+    {{ with $subtitle }}<p class="text-center text-lg mb-8">{{ . }}</p>{{ end }}
     <div class="flex flex-wrap justify-center gap-8">
-      {{ range .content.plans }}
+      {{ range $plans }}
       <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8 w-full max-w-xs flex flex-col items-center border border-gray-200 dark:border-gray-700 {{ if .highlight }}ring-2 ring-primary-500{{ end }}">
         <h3 class="text-xl font-semibold mb-2">{{ .title }}</h3>
         <div class="text-4xl font-bold mb-1">{{ .price }}<span class="text-base font-normal">{{ .period }}</span></div>
