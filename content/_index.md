@@ -247,8 +247,8 @@ sections:
       title: My title
       subtitle: My subtitle
       text: <script async  src="https://js.stripe.com/v3/buy-button.js"></script><stripe-buy-button  buy-button-id="buy_btn_1RbboGG5nhV0g7HGnTld9Pyq"  publishable-key="pk_live_51PcjwFG5nhV0g7HGMfTHbPBJCm4AwRjRH5cLgAXH1fF8onwLP5oGp7KOy95BXNu8QXZ27ifLKscOwaLgp0gqrIAE00vrlsUpA3"></stripe-buy-button>
-      
-  - block: pricing
+
+  - block: pricing2
     content:
       title: Sponsor
       subtitle: Sponsor the project you love!
