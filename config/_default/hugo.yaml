@@ -9,7 +9,7 @@ baseURL: 'https://luluyoga.shop/' # Website URL
 ############################
 ## PAGE OPTIONS
 ############################
-
+#Control page features for an entire collection of pages by using Hugo cascades in hugo.yaml.
 cascade:
   # Blog post options
   - _target:

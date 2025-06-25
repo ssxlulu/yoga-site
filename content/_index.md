@@ -29,7 +29,7 @@ sections:
       spacing:
         padding: ["4rem", 0, "4rem", 0]
         margin: [0, 0, 0, 0]
-      css_class: "dark py-16"
+      css_class: "dark py-16 hero-block"
       background:
         color: "navy"
         image:
@@ -53,7 +53,7 @@ sections:
       spacing:
         padding: ["4rem", 0, "4rem", 0]
         margin: [0, 0, 0, 0]
-      css_class: "dark py-16"
+      css_class: "dark py-16 hero-block"
       background:
         color: "navy"
         image:
@@ -77,7 +77,7 @@ sections:
       spacing:
         padding: ["4rem", 0, "4rem", 0]
         margin: [0, 0, 0, 0]
-      css_class: "dark py-16"
+      css_class: "dark py-16 hero-block"
       background:
         color: "navy"
         image:
@@ -101,7 +101,7 @@ sections:
       spacing:
         padding: ["4rem", 0, "4rem", 0]
         margin: [0, 0, 0, 0]
-      css_class: "dark py-16"
+      css_class: "dark py-16 hero-block"
       background:
         color: "navy"
         image:
