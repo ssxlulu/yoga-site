@@ -1,6 +1,6 @@
 ---
 title: Terms of Service
-date: Jan 18, 2025
+date: 2025-06-25
 share: false
 ---
 
