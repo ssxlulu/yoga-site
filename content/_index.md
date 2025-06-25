@@ -224,36 +224,38 @@ sections:
         - id: vULJxVJD6as
           # title: 瑜伽入门教学
           # description: 适合初学者的基础瑜伽动作讲解
-        - id: vULJxVJD6as
+        - id: 8AS43ov9vfA
           # title: 进阶力量瑜伽
           # description: 提升核心力量与柔韧性
-        - id: vULJxVJD6as
+        - id: CQgz3LBKwQs
           # title: 放松冥想引导
           # description: 跟随视频进行深度放松
-        - id: vULJxVJD6as
+        - id: j8YJrIMm8Oc
           # title: 放松冥想引导
           # description: 跟随视频进行深度放松
-        - id: vULJxVJD6as
+        - id: RW9X7ysNIl0
           # title: 放松冥想引导
           # description: 跟随视频进行深度放松
-        - id: vULJxVJD6as
+        - id: SMDOMxtxCOQ
           # title: 放松冥想引导
           # description: 跟随视频进行深度放松
-        - id: vULJxVJD6as
+        - id: ingMSrKlN5U
           # title: 放松冥想引导
           # description: 跟随视频进行深度放松
-        - id: vULJxVJD6as
+        - id: JIIesLt6M9s
           # title: 放松冥想引导
           # description: 跟随视频进行深度放松
-        - id: vULJxVJD6as
+        - id: crkLaMtfGMQ
           # title: 放松冥想引导
           # description: 跟随视频进行深度放松
-        - id: vULJxVJD6as
+        - id: BcT9f2xlbG4
           # title: 放松冥想引导
           # description: 跟随视频进行深度放松
-        - id: vULJxVJD6as
+        - id: 1qujNp-MnP0
           # title: 放松冥想引导
           # description: 跟随视频进行深度放松
+        - id: e0aMAbEyr5M
+        - id: oAhYi64F8Ok
   - block: testimonials
     content:
       title: ""

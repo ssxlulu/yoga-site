@@ -1,19 +1,128 @@
+
+/* Hugo Blox Hero Block 移动端背景图片修复 */
+
+/* 基础hero block样式优化 */
 .hero-block {
   position: relative;
-  z-index: auto;
+  overflow: hidden;
   margin-bottom: 0.6rem;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 60vh; /* 可根据实际情况调整 */
-  /* padding-top: 4rem; */
-  /* padding-bottom: 2rem; */
-  /* min-height: unset; */
-  /* background-attachment: scroll; */
+
 }
 
+/* 修复hero block背景图片在所有设备上的显示 */
+.hero-block .hero-overlay {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important; /* 移动端不支持fixed */
+}
+
+/* 针对移动端的特殊优化 */
 @media (max-width: 768px) {
   .hero-block {
-    min-height: 40vh; /* 移动端高度可适当调整 */
+    min-height: 60vh; /* 确保在移动端有足够高度 */
+  }
+  
+  /* 重要：覆盖默认的背景图片设置 */
+  .hero-block .hero-overlay,
+  .hero-block::before,
+  .hero-block .wg-hero::before {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: scroll !important;
+    /* 防止图片被过度放大 */
+    transform: none !important;
+    scale: none !important;
+  }
+  
+  /* 如果背景图片仍然显示不正确，使用这个更强制的方法 */
+  .hero-block[style*="background-image"] {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: scroll !important;
   }
 }
+
+/* 超小屏幕设备（手机竖屏） */
+@media (max-width: 480px) {
+  .hero-block {
+    min-height: 50vh;
+  }
+  
+  /* 更精确的背景控制 */
+  .hero-block .hero-overlay,
+  .hero-block::before,
+  .hero-block .wg-hero::before {
+    background-size: cover !important;
+    background-position: center 30% !important; /* 稍微调整焦点位置 */
+  }
+}
+
+/* 如果上述方法仍不生效，使用更直接的方法 */
+/* 请根据实际HTML结构调整选择器 */
+@media (max-width: 768px) {
+  /* 方法1: 直接针对具有背景图片的hero元素 */
+  .wg-hero[style*="background-image"],
+  .hero[style*="background-image"],
+  [class*="hero"][style*="background-image"] {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: scroll !important;
+  }
+  
+  /* 方法2: 如果图片通过伪元素设置 */
+  .wg-hero::before,
+  .hero::before,
+  [class*="hero"]::before {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: scroll !important;
+  }
+  
+  /* 方法3: 如果有专门的背景容器 */
+  .hero-background,
+  .background-image,
+  .bg-image {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: scroll !important;
+  }
+}
+
+/* 如果你想要更精确的控制，可以针对特定的hero block */
+.hero-block.dark {
+  /* 确保暗色主题下的可读性 */
+}
+
+/* 额外的移动端优化 */
+@media (max-width: 768px) {
+  /* 调整hero内容的间距 */
+  .hero-block .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* 确保文字内容在移动端可读 */
+  .hero-block h1,
+  .hero-block .hero-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .hero-block p,
+  .hero-block .hero-text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+/* 调试用：临时显示边框来检查元素位置 */
+/* 使用时取消注释，调试完成后删除 */
+/*
+.hero-block {
+  border: 2px solid red !important;
+}
+.hero-block * {
+  border: 1px solid blue !important;
+}
+*/
