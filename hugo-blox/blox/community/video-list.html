@@ -1,0 +1,27 @@
+<!--
+  Custom Video List Blox for Hugo Blox
+  支持在 _index.md 配置 YouTube 视频列表
+-->
+{{ $block := .wcBlock | default . }}
+{{ $data := $block.content | default .Params }}
+{{ $title := $data.title }}
+{{ $subtitle := $data.subtitle }}
+{{ $videos := $data.videos }}
+
+<section class="video-list-section py-12">
+  <div class="container mx-auto">
+    {{ with $title }}<h2 class="text-3xl font-bold text-center mb-2">{{ . }}</h2>{{ end }}
+    {{ with $subtitle }}<p class="text-center text-lg mb-8">{{ . }}</p>{{ end }}
+    <div class="flex flex-wrap justify-center gap-8">
+      {{ range $videos }}
+      <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-4 w-full max-w-xs flex flex-col items-center border border-gray-200 dark:border-gray-700">
+        <div class="w-full aspect-video mb-3">
+          <iframe class="w-full h-48 rounded" src="https://www.youtube.com/embed/{{ .id }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <h3 class="text-lg font-semibold mb-1 text-center">{{ .title }}</h3>
+        {{ with .description }}<p class="text-gray-600 dark:text-gray-300 text-sm text-center">{{ . }}</p>{{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

@@ -186,36 +186,50 @@ sections:
   #   design:
   #     # Section background color (CSS class)
   #     css_class: "bg-gray-100 dark:bg-gray-900"
-  - block: collection
-    id: posts
+  # - block: collection
+  #   id: posts
+  #   content:
+  #     title: Recent Posts
+  #     subtitle: ''
+  #     text: 'Check out my recent blog posts below!'
+  #     # Choose how many pages you would like to display (0 = all pages)
+  #     count: 5
+  #     # Filter on criteria
+  #     filters:
+  #       # The folders to display content from
+  #       folders:
+  #         - video
+  #       author: ""
+  #       category: ""
+  #       tag: ""
+  #       publication_type: ""
+  #       featured_only: false
+  #       exclude_featured: false
+  #       exclude_future: false
+  #       exclude_past: false
+  #     # Choose how many pages you would like to offset by
+  #     # Useful if you wish to show the first item in the Featured widget
+  #     offset: 0
+  #     # Field to sort by, such as Date or Title
+  #     sort_by: 'Date'
+  #     sort_ascending: false
+  #   design:
+  #     # Choose a listing view
+  #     view: card
+  - block: video-list
     content:
-      title: Recent Posts
-      subtitle: ''
-      text: 'Check out my recent blog posts below!'
-      # Choose how many pages you would like to display (0 = all pages)
-      count: 5
-      # Filter on criteria
-      filters:
-        # The folders to display content from
-        folders:
-          - video
-        author: ""
-        category: ""
-        tag: ""
-        publication_type: ""
-        featured_only: false
-        exclude_featured: false
-        exclude_future: false
-        exclude_past: false
-      # Choose how many pages you would like to offset by
-      # Useful if you wish to show the first item in the Featured widget
-      offset: 0
-      # Field to sort by, such as Date or Title
-      sort_by: 'Date'
-      sort_ascending: false
-    design:
-      # Choose a listing view
-      view: card
+      title: 推荐视频
+      subtitle: 精选瑜伽教学视频
+      videos:
+        - id: vULJxVJD6as
+          # title: 瑜伽入门教学
+          # description: 适合初学者的基础瑜伽动作讲解
+        - id: vULJxVJD6as
+          # title: 进阶力量瑜伽
+          # description: 提升核心力量与柔韧性
+        - id: vULJxVJD6as
+          # title: 放松冥想引导
+          # description: 跟随视频进行深度放松
   - block: testimonials
     content:
       title: ""
