@@ -1,6 +1,6 @@
 <!--
   Custom Video List Blox for Hugo Blox
-  竖屏9:16视频卡片风格，卡片更大，横向滑动体验更好
+  竖屏9:16视频卡片风格，响应式设计，支持横向滑动
 -->
 {{ $block := .wcBlock | default . }}
 {{ $data := $block.content | default .Params }}
@@ -9,78 +9,380 @@
 {{ $videos := $data.videos }}
 
 <section class="video-list-section py-12">
-  <div class="container mx-auto">
+  <div class="container mx-auto px-4">
     {{ with $title }}<h2 class="text-3xl font-bold text-center mb-2">{{ . }}</h2>{{ end }}
-    {{ with $subtitle }}<p class="text-center text-lg mb-8">{{ . }}</p>{{ end }}
-    <div class="relative">
+    {{ with $subtitle }}<p class="text-center text-lg mb-8 text-gray-600 dark:text-gray-300">{{ . }}</p>{{ end }}
+    
+    <div class="relative video-container">
       {{ $videoCount := len $videos }}
-      <div class="relative">
-        {{ if gt $videoCount 5 }}
-        <button type="button" class="video-arrow left-0" onclick="scrollVideoList(-1)">
-          <svg class="w-8 h-8 text-gray-700" fill="currentColor" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
-        </button>
-        <button type="button" class="video-arrow right-0" onclick="scrollVideoList(1)">
-          <svg class="w-8 h-8 text-gray-700" fill="currentColor" viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg>
-        </button>
-        {{ end }}
-        <div id="video-list-scroll" class="overflow-x-auto">
-          <div class="flex gap-8 pb-4 flex-nowrap">
-            {{ range $videos }}
-            <div class="relative min-w-[220px] sm:min-w-[240px] md:min-w-[260px] lg:min-w-[280px] xl:min-w-[300px] max-w-[340px] group cursor-pointer">
-              <div class="aspect-[9/16] w-full rounded-2xl overflow-hidden shadow-xl bg-gray-200 relative">
-                <img class="w-full h-full object-cover transition-transform group-hover:scale-105" src="https://img.youtube.com/vi/{{ .id }}/maxresdefault.jpg" alt="{{ .title }}" />
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/60">
-                  <svg class="w-16 h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                </div>
-                <a href="https://www.youtube.com/watch?v={{ .id }}" target="_blank" class="absolute inset-0 z-10" aria-label="{{ .title }}"></a>
-                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                  <h3 class="text-white text-lg font-semibold truncate">{{ .title }}</h3>
-                </div>
+      
+      <!-- 左右滑动按钮 -->
+      {{ if gt $videoCount 3 }}
+      <button type="button" class="video-arrow video-arrow-left" onclick="scrollVideoList(-1)" aria-label="向左滑动">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+        </svg>
+      </button>
+      <button type="button" class="video-arrow video-arrow-right" onclick="scrollVideoList(1)" aria-label="向右滑动">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+        </svg>
+      </button>
+      {{ end }}
+      
+      <!-- 视频滚动容器 -->
+      <div id="video-list-scroll" class="video-scroll-container">
+        <div class="video-grid">
+          {{ range $videos }}
+          <div class="video-card">
+            <div class="video-thumbnail">
+              <img 
+                class="video-image" 
+                src="https://img.youtube.com/vi/{{ .id }}/maxresdefault.jpg" 
+                alt="{{ .title }}"
+                loading="lazy"
+              />
+              <div class="video-overlay">
+                <svg class="play-button" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
               </div>
-              {{ with .description }}
-              <div class="mt-2 text-sm text-gray-600 dark:text-gray-300 text-center line-clamp-2">{{ . }}</div>
-              {{ end }}
+              <a href="https://www.youtube.com/watch?v={{ .id }}" 
+                 target="_blank" 
+                 class="video-link" 
+                 aria-label="观看视频: {{ .title }}">
+              </a>
+              <div class="video-title-overlay">
+                <h3 class="video-title">{{ .title }}</h3>
+              </div>
             </div>
+            {{ with .description }}
+            <div class="video-description">{{ . }}</div>
             {{ end }}
           </div>
+          {{ end }}
         </div>
-      </div>
-      <!-- 指示圆点 -->
-      <div class="flex justify-center mt-4 gap-2">
-        {{ range $i, $v := $videos }}
-        <span class="w-2 h-2 rounded-full bg-gray-300 inline-block"></span>
-        {{ end }}
       </div>
     </div>
   </div>
 </section>
+
 <style>
-.aspect-\[9\/16\] { aspect-ratio: 9/16; }
-.line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-clamp: 2; }
+.video-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.video-scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0 20px;
+}
+
+.video-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.video-grid {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 16px;
+  min-width: min-content;
+}
+
+.video-card {
+  flex: 0 0 auto;
+  width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-4px);
+}
+
+.video-thumbnail {
+  position: relative;
+  aspect-ratio: 9/16;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  background: #f3f4f6;
+}
+
+.video-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover .video-image {
+  transform: scale(1.05);
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-card:hover .video-overlay {
+  opacity: 1;
+}
+
+.play-button {
+  width: 48px;
+  height: 48px;
+  color: white;
+  opacity: 0.9;
+}
+
+.video-link {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
+
+.video-title-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 16px 12px 12px;
+}
+
+.video-title {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.video-description {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #6b7280;
+  text-align: center;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .video-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 20;
-  background: rgba(255,255,255,0.8);
-  border-radius: 9999px;
-  padding: 0.25rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  transition: background 0.2s;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: #374151;
 }
-.video-arrow:hover { background: #f3f4f6; }
-.video-arrow.left-0 { left: -2rem; }
-.video-arrow.right-0 { right: -2rem; }
+
+.video-arrow:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.video-arrow-left {
+  left: -20px;
+}
+
+.video-arrow-right {
+  right: -20px;
+}
+
+/* 响应式设计 */
+@media (max-width: 1280px) {
+  .video-card {
+    width: 180px;
+  }
+  
+  .video-arrow-left {
+    left: 10px;
+  }
+  
+  .video-arrow-right {
+    right: 10px;
+  }
+}
+
 @media (max-width: 1024px) {
-  .video-arrow.left-0 { left: 0.25rem; }
-  .video-arrow.right-0 { right: 0.25rem; }
+  .video-card {
+    width: 160px;
+  }
+  
+  .video-grid {
+    gap: 16px;
+  }
+  
+  .video-scroll-container {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-card {
+    width: 140px;
+  }
+  
+  .video-grid {
+    gap: 12px;
+  }
+  
+  .video-scroll-container {
+    padding: 0 12px;
+  }
+  
+  .video-title {
+    font-size: 13px;
+  }
+  
+  .video-description {
+    font-size: 11px;
+  }
+  
+  .play-button {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .video-card {
+    width: 130px;
+  }
+  
+  .video-grid {
+    gap: 10px;
+  }
+  
+  .video-arrow {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .video-arrow svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* 暗色主题支持 */
+@media (prefers-color-scheme: dark) {
+  .video-thumbnail {
+    background: #374151;
+  }
+  
+  .video-description {
+    color: #9ca3af;
+  }
+  
+  .video-arrow {
+    background: rgba(31, 41, 55, 0.95);
+    color: #e5e7eb;
+  }
+  
+  .video-arrow:hover {
+    background: #1f2937;
+  }
 }
 </style>
+
 <script>
-function scrollVideoList(dir) {
-  const el = document.getElementById('video-list-scroll');
-  if (!el) return;
-  const scrollAmount = el.offsetWidth * 0.8;
-  el.scrollBy({ left: dir * scrollAmount, behavior: 'smooth' });
+function scrollVideoList(direction) {
+  const scrollContainer = document.getElementById('video-list-scroll');
+  if (!scrollContainer) return;
+  
+  const cardWidth = 200; // 基础卡片宽度
+  const gap = 20; // 卡片间距
+  const scrollAmount = (cardWidth + gap) * 2; // 每次滚动2个卡片的距离
+  
+  scrollContainer.scrollBy({
+    left: direction * scrollAmount,
+    behavior: 'smooth'
+  });
 }
+
+// 触摸滑动支持
+document.addEventListener('DOMContentLoaded', function() {
+  const scrollContainer = document.getElementById('video-list-scroll');
+  if (!scrollContainer) return;
+  
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+  
+  scrollContainer.addEventListener('mousedown', (e) => {
+    isDown = true;
+    scrollContainer.style.cursor = 'grabbing';
+    startX = e.pageX - scrollContainer.offsetLeft;
+    scrollLeft = scrollContainer.scrollLeft;
+  });
+  
+  scrollContainer.addEventListener('mouseleave', () => {
+    isDown = false;
+    scrollContainer.style.cursor = 'grab';
+  });
+  
+  scrollContainer.addEventListener('mouseup', () => {
+    isDown = false;
+    scrollContainer.style.cursor = 'grab';
+  });
+  
+  scrollContainer.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - scrollContainer.offsetLeft;
+    const walk = (x - startX) * 2;
+    scrollContainer.scrollLeft = scrollLeft - walk;
+  });
+  
+  // 触屏设备支持
+  let touchStartX = 0;
+  let touchScrollLeft = 0;
+  
+  scrollContainer.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchScrollLeft = scrollContainer.scrollLeft;
+  });
+  
+  scrollContainer.addEventListener('touchmove', (e) => {
+    if (!touchStartX) return;
+    const touchCurrentX = e.touches[0].clientX;
+    const touchDiff = touchStartX - touchCurrentX;
+    scrollContainer.scrollLeft = touchScrollLeft + touchDiff;
+  });
+  
+  scrollContainer.addEventListener('touchend', () => {
+    touchStartX = 0;
+  });
+});
 </script>
