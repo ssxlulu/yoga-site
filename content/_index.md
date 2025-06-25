@@ -27,10 +27,9 @@ sections:
           url: https://ssxlulu.github.io/yoga-site/#artisticyoagmat
     design:
       spacing:
-        padding: [0, 0, "2rem", 0]
+        padding: ["4rem", 0, "4rem", 0]
         margin: [0, 0, 0, 0]
-      # For full-screen, add `min-h-screen` below
-      css_class: "dark"
+      css_class: "dark py-16"
       background:
         color: "navy"
         image:
@@ -50,17 +49,11 @@ sections:
       secondary_action:
         text: Buy
         url: https://luluyoga.shop/catalog/artisticyoagmat/
-      # announcement:
-      #   text: "Flash Sale: Up to 20% Off ! "
-      #   link:
-      #     text: "Buy Now"
-      #     url: https://luluyoga.shop/catalog/all/
     design:
       spacing:
-        padding: [0, 0, "2rem", 0]
+        padding: ["4rem", 0, "4rem", 0]
         margin: [0, 0, 0, 0]
-      # For full-screen, add `min-h-screen` below
-      css_class: "dark"
+      css_class: "dark py-16"
       background:
         color: "navy"
         image:
@@ -80,17 +73,11 @@ sections:
       secondary_action:
         text: Buy
         url: https://luluyoga.shop/catalog/luxuryyogamat/
-      # announcement:
-      #   text: "Flash Sale: Up to 20% Off ! "
-      #   link:
-      #     text: "Buy Now"
-      #     url: https://luluyoga.shop/catalog/all/
     design:
       spacing:
-        padding: [0, 0, 0, 0]
+        padding: ["4rem", 0, "4rem", 0]
         margin: [0, 0, 0, 0]
-      # For full-screen, add `min-h-screen` below
-      css_class: "dark"
+      css_class: "dark py-16"
       background:
         color: "navy"
         image:
@@ -110,17 +97,11 @@ sections:
       secondary_action:
         text: Buy
         url: https://luluyoga.shop/catalog/foldableyogamat/
-      # announcement:
-      #   text: "Flash Sale: Up to 20% Off ! "
-      #   link:
-      #     text: "Buy Now"
-      #     url: https://luluyoga.shop/catalog/all/
     design:
       spacing:
-        padding: [0, 0, 0, 0]
+        padding: ["4rem", 0, "4rem", 0]
         margin: [0, 0, 0, 0]
-      # For full-screen, add `min-h-screen` below
-      css_class: "dark"
+      css_class: "dark py-16"
       background:
         color: "navy"
         image:
