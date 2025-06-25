@@ -1,6 +1,5 @@
 ---
-title: Blog
-date: 2025-6-25
+title: Post
 ---
 
 {{< youtube vULJxVJD6as >}}
