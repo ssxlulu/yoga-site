@@ -218,7 +218,7 @@ sections:
   #     view: card
   - block: testimonials
     content:
-      title: "Lulu Yoga's Philosophy"
+      title: ""
       text: ""
       items:
         - name: "Lulu Su"
@@ -229,7 +229,7 @@ sections:
     design:
       spacing:
         # Reduce bottom spacing so the testimonial appears vertically centered between sections
-        padding: ["6rem", 0, 0, 0]
+        padding: ["3rem", 0, 0, 0]
   # - block: cta-card
   #   content:
   #     title: Build your future-proof website
@@ -247,5 +247,49 @@ sections:
       title: My title
       subtitle: My subtitle
       text: <script async  src="https://js.stripe.com/v3/buy-button.js"></script><stripe-buy-button  buy-button-id="buy_btn_1RbboGG5nhV0g7HGnTld9Pyq"  publishable-key="pk_live_51PcjwFG5nhV0g7HGMfTHbPBJCm4AwRjRH5cLgAXH1fF8onwLP5oGp7KOy95BXNu8QXZ27ifLKscOwaLgp0gqrIAE00vrlsUpA3"></stripe-buy-button>
-
+      
+  - block: pricing
+    content:
+      title: Sponsor
+      subtitle: Sponsor the project you love!
+      plans:
+        - title: Starter
+          price: $9
+          period: /month
+          description: Our starter option
+          highlight: ''
+          button:
+            url: https://example.com
+            text: Get Started          
+          features:
+            - All the blocks you need
+            - No setup
+            - Community support
+        - title: Premium
+          price: $99
+          period: /month
+          description: Our premium option
+          highlight: Most Popular
+          button:
+            url: https://example.com
+            text: Get Started
+          features:
+            - All the blocks you need
+            - No setup
+            - Community support
+            - Access to exclusive features
+        - title: Enterprise
+          price: $999
+          period: /month
+          description: Our enterprise option
+          highlight: ''
+          button:
+            url: https://example.com
+            text: Get Started
+          features:
+            - All the blocks you need
+            - No setup
+            - Community support
+            - Access to exclusive features
+            - Enterprise support
 ---
