@@ -218,8 +218,8 @@ sections:
   #     view: card
   - block: video-list
     content:
-      title: 推荐视频
-      subtitle: 精选瑜伽教学视频
+      # title: 推荐视频
+      # subtitle: 精选瑜伽教学视频
       videos:
         - id: vULJxVJD6as
           # title: 瑜伽入门教学
@@ -282,54 +282,54 @@ sections:
   #       # Card background color (CSS class)
   #       css_class: "bg-primary-700"
   #       css_style: ""
-  - block: markdown
-    content:
-      title: My title
-      subtitle: My subtitle
-      text: <script async  src="https://js.stripe.com/v3/buy-button.js"></script><stripe-buy-button  buy-button-id="buy_btn_1RbboGG5nhV0g7HGnTld9Pyq"  publishable-key="pk_live_51PcjwFG5nhV0g7HGMfTHbPBJCm4AwRjRH5cLgAXH1fF8onwLP5oGp7KOy95BXNu8QXZ27ifLKscOwaLgp0gqrIAE00vrlsUpA3"></stripe-buy-button>
+  # - block: markdown
+  #   content:
+  #     title: My title
+  #     subtitle: My subtitle
+  #     text: <script async  src="https://js.stripe.com/v3/buy-button.js"></script><stripe-buy-button  buy-button-id="buy_btn_1RbboGG5nhV0g7HGnTld9Pyq"  publishable-key="pk_live_51PcjwFG5nhV0g7HGMfTHbPBJCm4AwRjRH5cLgAXH1fF8onwLP5oGp7KOy95BXNu8QXZ27ifLKscOwaLgp0gqrIAE00vrlsUpA3"></stripe-buy-button>
 
-  - block: pricing2
-    content:
-      title: Sponsor
-      subtitle: Sponsor the project you love!
-      plans:
-        - title: Starter
-          price: $9
-          period: /month
-          description: Our starter option
-          highlight: ''
-          button:
-            url: https://example.com
-            text: Get Started          
-          features:
-            - All the blocks you need
-            - No setup
-            - Community support
-        - title: Premium
-          price: $99
-          period: /month
-          description: Our premium option
-          highlight: Most Popular
-          button:
-            url: https://example.com
-            text: Get Started
-          features:
-            - All the blocks you need
-            - No setup
-            - Community support
-            - Access to exclusive features
-        - title: Enterprise
-          price: $999
-          period: /month
-          description: Our enterprise option
-          highlight: ''
-          button:
-            url: https://example.com
-            text: Get Started
-          features:
-            - All the blocks you need
-            - No setup
-            - Community support
-            - Access to exclusive features
-            - Enterprise support
+  # - block: pricing2
+  #   content:
+  #     title: Sponsor
+  #     subtitle: Sponsor the project you love!
+  #     plans:
+  #       - title: Starter
+  #         price: $9
+  #         period: /month
+  #         description: Our starter option
+  #         highlight: ''
+  #         button:
+  #           url: https://example.com
+  #           text: Get Started          
+  #         features:
+  #           - All the blocks you need
+  #           - No setup
+  #           - Community support
+  #       - title: Premium
+  #         price: $99
+  #         period: /month
+  #         description: Our premium option
+  #         highlight: Most Popular
+  #         button:
+  #           url: https://example.com
+  #           text: Get Started
+  #         features:
+  #           - All the blocks you need
+  #           - No setup
+  #           - Community support
+  #           - Access to exclusive features
+  #       - title: Enterprise
+  #         price: $999
+  #         period: /month
+  #         description: Our enterprise option
+  #         highlight: ''
+  #         button:
+  #           url: https://example.com
+  #           text: Get Started
+  #         features:
+  #           - All the blocks you need
+  #           - No setup
+  #           - Community support
+  #           - Access to exclusive features
+  #           - Enterprise support
 ---
