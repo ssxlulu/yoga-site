@@ -1,6 +1,6 @@
 ---
-title: 'Home'
-date: 2023-10-24
+title: 'Luxury Yoga Mat'
+date: 2025-06-26
 type: landing
 
 design:

@@ -1,0 +1,28 @@
+<!--
+  Product List Blox for Hugo Blox
+  只渲染 Stripe Buy Button，由 Stripe 自动展示商品图片、标题、描述、价格、按钮
+-->
+{{ $block := .wcBlock | default . }}
+{{ $data := $block.content | default .Params }}
+{{ $title := $data.title }}
+{{ $subtitle := $data.subtitle }}
+{{ $products := $data.products }}
+
+<!-- Stripe Buy Button Script（只插入一次） -->
+<script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+<section class="product-list-section">
+  <div class="container mx-auto py-12">
+    {{ with $title }}<h2 class="text-3xl font-bold text-center mb-2">{{ . }}</h2>{{ end }}
+    {{ with $subtitle }}<p class="text-center text-lg mb-8">{{ . }}</p>{{ end }}
+    <div class="flex flex-wrap justify-center gap-8">
+      {{ range $products }}
+      <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6 w-full max-w-xs flex flex-col items-center border border-gray-200 dark:border-gray-700">
+        {{ if and .buy_button_id .publishable_key }}
+        <stripe-buy-button buy-button-id="{{ .buy_button_id }}" publishable-key="{{ .publishable_key }}"></stripe-buy-button>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
