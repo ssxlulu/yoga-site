@@ -86,24 +86,24 @@ sections:
     id: solutions
     content:
       items:
-        - title: Spacious & Portable Design
-          text: Expanded size: 183cm × 61cm × 4mm. Folded size: approx. 34cm × 34cm × 10cm. Lightweight at just 250g, easy to carry and store.
+        - title: "Spacious & Portable Design"
+          text: "Expanded size: 183cm × 61cm × 4mm. Folded size: approx. 34cm × 34cm × 10cm. Lightweight at just 250g, easy to carry and store."
           feature_icon: arrows-expand
           features:
             - "Full-length mat for all yoga poses"
             - "Folds compactly for travel and storage"
             - "Ultra-lightweight for easy transport"
           image: foldable/1.png
-        - title: Premium Eco-Friendly Material
-          text: Crafted from TPE, Luluyoga's Folding Yoga Mat is durable, non-slip, and environmentally friendly—perfect for your daily practice.
+        - title: "Premium Eco-Friendly Material"
+          text: "Crafted from TPE, Luluyoga's Folding Yoga Mat is durable, non-slip, and environmentally friendly—perfect for your daily practice."
           feature_icon: leaf
           features:
             - "Made from high-quality TPE material"
             - "Non-slip surface for safe workouts"
             - "Eco-friendly and long-lasting"
           image: foldable/2.png
-        - title: Superior Comfort & Support
-          text: Provides excellent cushioning and joint support, making your yoga sessions more comfortable and effective.
+        - title: "Superior Comfort & Support"
+          text: "Provides excellent cushioning and joint support, making your yoga sessions more comfortable and effective."
           feature_icon: heart
           features:
             - "Cushions joints to reduce impact"
