@@ -128,6 +128,15 @@ sections:
 
         - buy_button_id: "buy_btn_1ReGaLG5nhV0g7HGckqsZz0V"
           publishable_key: "pk_live_51PcjwFG5nhV0g7HGMfTHbPBJCm4AwRjRH5cLgAXH1fF8onwLP5oGp7KOy95BXNu8QXZ27ifLKscOwaLgp0gqrIAE00vrlsUpA3"
+
+        - buy_button_id: "buy_btn_1ReGaLG5nhV0g7HGckqsZz0V"
+          publishable_key: "pk_live_51PcjwFG5nhV0g7HGMfTHbPBJCm4AwRjRH5cLgAXH1fF8onwLP5oGp7KOy95BXNu8QXZ27ifLKscOwaLgp0gqrIAE00vrlsUpA3"
+
+        - buy_button_id: "buy_btn_1ReGaLG5nhV0g7HGckqsZz0V"
+          publishable_key: "pk_live_51PcjwFG5nhV0g7HGMfTHbPBJCm4AwRjRH5cLgAXH1fF8onwLP5oGp7KOy95BXNu8QXZ27ifLKscOwaLgp0gqrIAE00vrlsUpA3"
+
+        - buy_button_id: "buy_btn_1ReGaLG5nhV0g7HGckqsZz0V"
+          publishable_key: "pk_live_51PcjwFG5nhV0g7HGMfTHbPBJCm4AwRjRH5cLgAXH1fF8onwLP5oGp7KOy95BXNu8QXZ27ifLKscOwaLgp0gqrIAE00vrlsUpA3"
   - block: testimonials
     content:
       title: ""
