@@ -58,23 +58,23 @@ sections:
   #     # Reduce spacing
   #     spacing:
   #       padding: ["1rem", 0, "1rem", 0]
-  - block: features
-    id: features
-    content:
-      title: Features
-      text: Build your site with blocks 🧱
-      items:
-        - name: Foldable & Portable
-          icon: briefcase
-          # description: Automatic sitemaps, RSS feeds, and rich metadata take the pain out of SEO and syndication.
-        - name: Ultra-Lightweight
-          icon: scale
-          # description: Super fast page load with Tailwind CSS and super fast site building with Hugo.
-        - name: Durable
-          icon: sparkles
-          # description: One-click deployment to GitHub Pages. Have your new website live within 5 minutes!
-        - name: Eco-friendly
-          icon: globe-alt
+  # - block: features
+  #   id: features
+  #   content:
+  #     title: Features
+  #     text: Build your site with blocks 🧱
+  #     items:
+  #       - name: Foldable & Portable
+  #         icon: briefcase
+  #         # description: Automatic sitemaps, RSS feeds, and rich metadata take the pain out of SEO and syndication.
+  #       - name: Ultra-Lightweight
+  #         icon: scale
+  #         # description: Super fast page load with Tailwind CSS and super fast site building with Hugo.
+  #       - name: Durable
+  #         icon: sparkles
+  #         # description: One-click deployment to GitHub Pages. Have your new website live within 5 minutes!
+  #       - name: Eco-friendly
+  #         icon: globe-alt
           # description: Edit and design your site just using rich text (Markdown) and configurable YAML parameters.
         # - name: Highly Rated
         #   icon: star
@@ -110,15 +110,15 @@ sections:
             - "Stable grip for confident movement"
             - "Enhances comfort during every pose"
           image: foldable/3.png
-    design:
-      # Section background color (CSS class)
-      # css_class: "bg-gray-100 dark:bg-gray-900"
-      background: 
-        color: '#FFEFD5'
+    # design:
+    #   # Section background color (CSS class)
+    #   # css_class: "bg-gray-100 dark:bg-gray-900"
+    #   background: 
+    #     color: '#FFEFD5'
   - block: product-list
     content:
-      title: "购买我们的瑜伽垫"
-      subtitle: "安全支付，全球配送"
+      title: "Buy Our Yoga Mat"
+      subtitle: "Secure Payment, Speed Shipping"
       products:
         - buy_button_id: "buy_btn_1ReGaLG5nhV0g7HGckqsZz0V"
           publishable_key: "pk_live_51PcjwFG5nhV0g7HGMfTHbPBJCm4AwRjRH5cLgAXH1fF8onwLP5oGp7KOy95BXNu8QXZ27ifLKscOwaLgp0gqrIAE00vrlsUpA3"
