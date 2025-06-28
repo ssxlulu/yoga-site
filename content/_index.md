@@ -37,30 +37,30 @@ sections:
           filename: home_1.jpg
           filters:
             brightness: 0.5
-  - block: hero
-    id: artisticyoagmat
-    content:
-      title: Artistic Travel Yoga Mat
-      text: Superior cushioning and grip. Compact and easy to store.
-      primary_action:
-        text: Learn more
-        url: https://luluyoga.shop/catalog/artisticyoagmat/
-        # icon: rocket-launch
-      secondary_action:
-        text: Buy
-        url: https://luluyoga.shop/catalog/artisticyoagmat/
-    design:
-      spacing:
-        padding: [0, 0, 0, 0]
-        margin: [0, 0, 0, 0]
-      css_class: "dark hero-block"
-      background:
-        color: "navy"
-        image:
-          # Add your image background to `assets/media/`.
-          filename: home_2.jpg
-          filters:
-            brightness: 0.5
+  # - block: hero
+  #   id: artisticyoagmat
+  #   content:
+  #     title: Artistic Travel Yoga Mat
+  #     text: Superior cushioning and grip. Compact and easy to store.
+  #     primary_action:
+  #       text: Learn more
+  #       url: https://luluyoga.shop/catalog/artisticyoagmat/
+  #       # icon: rocket-launch
+  #     secondary_action:
+  #       text: Buy
+  #       url: https://luluyoga.shop/catalog/artisticyoagmat/
+  #   design:
+  #     spacing:
+  #       padding: [0, 0, 0, 0]
+  #       margin: [0, 0, 0, 0]
+  #     css_class: "dark hero-block"
+  #     background:
+  #       color: "navy"
+  #       image:
+  #         # Add your image background to `assets/media/`.
+  #         filename: home_2.jpg
+  #         filters:
+  #           brightness: 0.5
   - block: hero
     id: luxuryyogamat
     content:
@@ -68,11 +68,11 @@ sections:
       text: Soft, comfy, with alignment guides. Your ideal exercise partner.
       primary_action:
         text: Learn more
-        url: https://luluyoga.shop/catalog/luxuryyogamat/
+        url: https://ssxlulu.github.io/yoga-site/catalog/luxuryyogamat/
         # icon: rocket-launch
       secondary_action:
         text: Buy
-        url: https://luluyoga.shop/catalog/luxuryyogamat/
+        url: https://ssxlulu.github.io/yoga-site/catalog/luxuryyogamat/
     design:
       spacing:
         padding: [0, 0, 0, 0]
@@ -92,11 +92,11 @@ sections:
       text: Foldable design makes it easy to carry and store. Durable and eco-friendly.
       primary_action:
         text: Learn more
-        url: https://luluyoga.shop/catalog/foldableyogamat/
+        url: https://ssxlulu.github.io/yoga-site/catalog/foldableyogamat/
         # icon: rocket-launch
       secondary_action:
         text: Buy
-        url: https://luluyoga.shop/catalog/foldableyogamat/
+        url: https://ssxlulu.github.io/yoga-site/catalog/foldableyogamat/
     design:
       spacing:
         padding: [0, 0, 0, 0]
