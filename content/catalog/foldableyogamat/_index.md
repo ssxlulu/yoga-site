@@ -123,20 +123,15 @@ sections:
         - buy_button_id: "buy_btn_1ReGaLG5nhV0g7HGckqsZz0V"
           publishable_key: "pk_live_51PcjwFG5nhV0g7HGMfTHbPBJCm4AwRjRH5cLgAXH1fF8onwLP5oGp7KOy95BXNu8QXZ27ifLKscOwaLgp0gqrIAE00vrlsUpA3"
 
-        - buy_button_id: "buy_btn_1ReGaLG5nhV0g7HGckqsZz0V"
+        - buy_button_id: "buy_btn_1ReY6mG5nhV0g7HGMu2HUhp5"
           publishable_key: "pk_live_51PcjwFG5nhV0g7HGMfTHbPBJCm4AwRjRH5cLgAXH1fF8onwLP5oGp7KOy95BXNu8QXZ27ifLKscOwaLgp0gqrIAE00vrlsUpA3"
 
-        - buy_button_id: "buy_btn_1ReGaLG5nhV0g7HGckqsZz0V"
+        - buy_button_id: "buy_btn_1ResJPG5nhV0g7HGBigRG375"
           publishable_key: "pk_live_51PcjwFG5nhV0g7HGMfTHbPBJCm4AwRjRH5cLgAXH1fF8onwLP5oGp7KOy95BXNu8QXZ27ifLKscOwaLgp0gqrIAE00vrlsUpA3"
 
-        - buy_button_id: "buy_btn_1ReGaLG5nhV0g7HGckqsZz0V"
+        - buy_button_id: "buy_btn_1ResLMG5nhV0g7HGkC8Q9Tw1"
           publishable_key: "pk_live_51PcjwFG5nhV0g7HGMfTHbPBJCm4AwRjRH5cLgAXH1fF8onwLP5oGp7KOy95BXNu8QXZ27ifLKscOwaLgp0gqrIAE00vrlsUpA3"
 
-        - buy_button_id: "buy_btn_1ReGaLG5nhV0g7HGckqsZz0V"
-          publishable_key: "pk_live_51PcjwFG5nhV0g7HGMfTHbPBJCm4AwRjRH5cLgAXH1fF8onwLP5oGp7KOy95BXNu8QXZ27ifLKscOwaLgp0gqrIAE00vrlsUpA3"
-
-        - buy_button_id: "buy_btn_1ReGaLG5nhV0g7HGckqsZz0V"
-          publishable_key: "pk_live_51PcjwFG5nhV0g7HGMfTHbPBJCm4AwRjRH5cLgAXH1fF8onwLP5oGp7KOy95BXNu8QXZ27ifLKscOwaLgp0gqrIAE00vrlsUpA3"
   - block: testimonials
     content:
       title: ""
@@ -152,3 +147,12 @@ sections:
         # Reduce bottom spacing so the testimonial appears vertically centered between sections
         padding: ["3rem", 0, 0, 0]
 ---
+<script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
+
+<stripe-buy-button
+  buy-button-id="buy_btn_1ResLMG5nhV0g7HGkC8Q9Tw1"
+  publishable-key="pk_live_51PcjwFG5nhV0g7HGMfTHbPBJCm4AwRjRH5cLgAXH1fF8onwLP5oGp7KOy95BXNu8QXZ27ifLKscOwaLgp0gqrIAE00vrlsUpA3"
+>
+</stripe-buy-button>

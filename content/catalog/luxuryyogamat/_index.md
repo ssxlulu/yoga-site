@@ -10,8 +10,8 @@ design:
 sections:
   - block: hero
     content:
-      title: Foldable Yoga Mat
-      text: Foldable design makes it easy to carry and store. Durable and eco-friendly.
+      title: Luxury Yoga Mat
+      text: Soft, comfy, with alignment guides. Your ideal exercise partner.
       # primary_action:
         # text: Get Started
         # url: https://hugoblox.com/templates/
@@ -34,7 +34,7 @@ sections:
         color: "navy"
         image:
           # Add your image background to `assets/media/`.
-          filename: home_4.jpg
+          filename: home_3.jpg
           filters:
             brightness: 0.5
   # - block: stats
@@ -88,7 +88,7 @@ sections:
       items:
         - title: "Spacious & Supportive Design"
           text: "Expanded size: 185cm × 68cm × 4.5mm. Folded size: approx. 68cm × 14cm × 14cm. Weighs 2900g for a stable, premium feel."
-          feature_icon: arrows-expand
+          feature_icon: star
           features:
             - "Full-length mat for all yoga poses"
             - "Folds compactly for travel and storage"
@@ -96,7 +96,7 @@ sections:
           image: luxury/1.png
         - title: "Premium PU & Natural Rubber"
           text: "Expertly crafted from high-quality PU and natural rubber, this luxury mat offers exceptional grip, comfort, and durability for your practice."
-          feature_icon: leaf
+          feature_icon: sparkles
           features:
             - "Superior grip for confident movement"
             - "Durable PU and natural rubber materials"

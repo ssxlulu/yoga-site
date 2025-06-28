@@ -332,4 +332,13 @@ sections:
   #           - Community support
   #           - Access to exclusive features
   #           - Enterprise support
+  - block: cta-card
+    content:
+      title: Every order feeds a stray cat.
+      text: With every order, we provide much-needed food to stray cats.
+    design:
+      card:
+        # Card background color (CSS class)
+        css_class: "cat-heart-card"
+        css_style: ""
 ---
