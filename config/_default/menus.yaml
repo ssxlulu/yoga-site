@@ -17,10 +17,10 @@ main:
     name: Foldable Yoga Mat
     url: catalog/foldableyogamat/
     weight: 40
-  - parent: Catalog
-    name: Artistic Travel Yoga Mat
-    url: catalog/artistictravelyogamat/
-    weight: 50
+  # - parent: Catalog
+  #   name: Artistic Travel Yoga Mat
+  #   url: catalog/artistictravelyogamat/
+  #   weight: 50
   - name: About Us
     url: aboutus/
     weight: 80

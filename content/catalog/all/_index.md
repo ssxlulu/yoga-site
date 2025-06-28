@@ -1,4 +1,10 @@
 ---
+_build:
+  render: never
+cascade:
+  _build:
+    render: never
+    list: always
 title: 'Home'
 date: 2023-10-24
 type: landing
