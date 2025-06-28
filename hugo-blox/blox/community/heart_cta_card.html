@@ -1,0 +1,292 @@
+{{/* Hugo Blox: Heart CTA Card Block */}}
+{{ $block := .wcBlock | default . }}
+{{ $data := $block.content | default .Params }}
+{{ $title := $data.title | default "Every order feeds a stray cat." }}
+{{ $description := $data.description | default "With every order, we provide much-needed food to stray cats." }}
+{{ $button := $data.button }}
+
+<!-- Hugo Blox Heart CTA Card -->
+<div class="cta-wrapper">
+    <div class="cta-card">
+        <!-- 猫爪背景装饰 -->
+        <div class="heart-bg">
+            <!-- 动态爱心由JS生成 -->
+        </div>
+        <!-- 卡片内容 -->
+        <div class="cta-content">
+            <h2 class="cta-title">{{ $title }}</h2>
+            <p class="cta-description">{{ $description }}</p>
+            {{ with $button }}
+            <a href="{{ .url }}" class="cta-button">{{ .text }}</a>
+            {{ end }}
+        </div>
+    </div>
+</div>
+
+<style>
+    /* CTA卡片的独立样式 */
+    .cta-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 70vh;
+        padding: 40px 20px;
+        background: #f8f9fa;
+    }
+
+    .cta-card {
+        position: relative;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 24px;
+        padding: 80px 60px;
+        text-align: center;
+        color: white;
+        max-width: 800px;
+        width: 100%;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cta-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 30px 80px rgba(102, 126, 234, 0.4);
+    }
+
+    /* 猫爪背景装饰 */
+    .cta-card .heart-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.25;
+        overflow: hidden;
+        pointer-events: none;
+    }
+
+    .cta-card .heart {
+        position: absolute;
+        animation: float 6s ease-in-out infinite;
+    }
+
+    /* 猫爪样式 */
+    .cta-card .heart {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* 猫爪垫 */
+    .cta-card .heart:before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 25px;
+        background: white;
+        border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* 猫爪趾 */
+    .cta-card .heart:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+    }
+
+    /* 创建猫爪趾的小圆点 */
+    .cta-card .heart::before {
+        box-shadow:
+            -12px -8px 0 -2px white,
+            -4px -12px 0 -3px white,
+            4px -12px 0 -3px white,
+            12px -8px 0 -2px white;
+    }
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0px) rotate(-5deg);
+            opacity: 0.2;
+        }
+
+        50% {
+            transform: translateY(-25px) rotate(5deg);
+            opacity: 0.35;
+        }
+    }
+
+    /* 内容样式 */
+    .cta-card .cta-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .cta-card .cta-title {
+        font-size: 3.2rem;
+        font-weight: 300;
+        margin: 0 0 16px 0;
+        line-height: 1.2;
+        letter-spacing: -1px;
+    }
+
+    .cta-card .cta-subtitle {
+        font-size: 1.3rem;
+        margin: 0 0 40px 0;
+        opacity: 0.9;
+        font-weight: 400;
+    }
+
+    .cta-card .cta-description {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin: 0 0 50px 0;
+        opacity: 0.85;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta-card .cta-button {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        padding: 16px 40px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-card .cta-button:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.5s;
+    }
+
+    .cta-card .cta-button:hover {
+        background: rgba(255, 255, 255, 0.25);
+        border-color: rgba(255, 255, 255, 0.5);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .cta-card .cta-button:hover:before {
+        left: 100%;
+    }
+
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+        .cta-card {
+            padding: 60px 30px;
+            margin: 20px;
+        }
+
+        .cta-card .cta-title {
+            font-size: 2.4rem;
+        }
+
+        .cta-card .cta-subtitle {
+            font-size: 1.1rem;
+        }
+
+        .cta-card .cta-description {
+            font-size: 1rem;
+        }
+    }
+
+    /* 额外的背景装饰 */
+    .cta-card::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+        background-size: 50px 50px;
+        animation: drift 20s linear infinite;
+        opacity: 0.3;
+    }
+
+    @keyframes drift {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(-50px, -50px);
+        }
+    }
+</style>
+
+<script>
+    // 创建猫爪元素
+    function createHeart() {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+
+        // 随机大小
+        const size = Math.random() * 25 + 35; // 35-60px，更大更明显
+        heart.style.width = size + 'px';
+        heart.style.height = size + 'px';
+
+        // 随机位置
+        heart.style.top = Math.random() * 70 + 15 + '%';
+        heart.style.left = Math.random() * 70 + 15 + '%';
+
+        // 随机动画时长和延迟
+        const duration = Math.random() * 3 + 5; // 5-8秒，稍慢一些
+        heart.style.animationDuration = duration + 's';
+        heart.style.animationDelay = Math.random() * 3 + 's';
+
+        // 更明显的透明度
+        heart.style.opacity = Math.random() * 0.15 + 0.2; // 0.2-0.35
+
+        return heart;
+    }
+
+    // 生成猫爪的函数
+    function addHeart() {
+        const heartBg = document.querySelector('.heart-bg');
+        if (heartBg) {
+            const heart = createHeart();
+            heartBg.appendChild(heart);
+
+            // 动画完成后移除元素
+            heart.addEventListener('animationend', () => {
+                if (heart.parentNode) {
+                    heart.parentNode.removeChild(heart);
+                }
+            });
+        }
+    }
+
+    // 页面加载完成后开始生成猫爪
+    document.addEventListener('DOMContentLoaded', function () {
+        // 初始生成更多猫爪
+        for (let i = 0; i < 12; i++) {
+            setTimeout(addHeart, i * 300);
+        }
+
+        // 持续生成新猫爪，频率更高
+        setInterval(addHeart, 1200);
+    });
+</script>
