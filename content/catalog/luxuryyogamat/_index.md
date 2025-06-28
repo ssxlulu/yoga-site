@@ -146,4 +146,8 @@ sections:
       spacing:
         # Reduce bottom spacing so the testimonial appears vertically centered between sections
         padding: ["3rem", 0, 0, 0]
+  - block: heart-cta-card
+    content:
+      title: Every order feeds a stray cat.
+      description: With every order, we provide much-needed food to stray cats.
 ---

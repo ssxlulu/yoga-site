@@ -146,13 +146,8 @@ sections:
       spacing:
         # Reduce bottom spacing so the testimonial appears vertically centered between sections
         padding: ["3rem", 0, 0, 0]
+  - block: heart-cta-card
+    content:
+      title: Every order feeds a stray cat.
+      description: With every order, we provide much-needed food to stray cats.
 ---
-<script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1ResLMG5nhV0g7HGkC8Q9Tw1"
-  publishable-key="pk_live_51PcjwFG5nhV0g7HGMfTHbPBJCm4AwRjRH5cLgAXH1fF8onwLP5oGp7KOy95BXNu8QXZ27ifLKscOwaLgp0gqrIAE00vrlsUpA3"
->
-</stripe-buy-button>

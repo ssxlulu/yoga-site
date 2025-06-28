@@ -218,8 +218,8 @@ sections:
   #     view: card
   - block: video-list
     content:
-      # title: 推荐视频
-      # subtitle: 精选瑜伽教学视频
+      title: Follow our yoga teacher all around the world
+      subtitle: Start your yoga practice with our cat teacher.
       videos:
         - id: vULJxVJD6as
           # title: 瑜伽入门教学
