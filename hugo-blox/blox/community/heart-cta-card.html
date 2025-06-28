@@ -6,15 +6,21 @@
 {{ $button := $data.button }}
 
 <style>
+    /* 移除body的flex居中，改为让cta-card自适应居中 */
     body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         margin: 0;
         padding: 40px 20px;
         background: #f8f9fa;
+        min-height: 100vh;
+    }
+
+    .center-container {
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
+        width: 100vw;
     }
 
     .cta-card {
@@ -29,6 +35,7 @@
         overflow: hidden;
         box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin: auto;
     }
 
     .cta-card:hover {
@@ -290,14 +297,11 @@
     }
 </style>
 
+<div class="center-container">
 <div class="cta-card">
     <!-- 爱心背景装饰 -->
     <div class="heart-bg">
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
+        <!-- 动态爱心由JS生成 -->
     </div>
     <!-- 卡片内容 -->
     <div class="cta-content">
@@ -306,3 +310,43 @@
         {{ with $button }}<a href="{{ .url }}" class="cta-button">{{ .text }}</a>{{ end }}
     </div>
 </div>
+</div>
+<script>
+// 动态生成爱心
+function randomBetween(a, b) {
+    return Math.random() * (b - a) + a;
+}
+function createHeart() {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    // 随机大小
+    const size = randomBetween(30, 60);
+    heart.style.width = size + 'px';
+    heart.style.height = (size * 0.9) + 'px';
+    // 随机位置
+    heart.style.top = randomBetween(5, 80) + '%';
+    heart.style.left = randomBetween(5, 80) + '%';
+    // 随机动画时长和延迟
+    const duration = randomBetween(4, 8);
+    heart.style.animationDuration = duration + 's';
+    heart.style.animationDelay = '0s';
+    // 随机透明度
+    heart.style.opacity = randomBetween(0.08, 0.16);
+    // 移动方向
+    const direction = Math.random() > 0.5 ? 1 : -1;
+    heart.style.transform = `rotate(${randomBetween(-10, 10) * direction}deg)`;
+    // 移除动画结束的heart
+    heart.addEventListener('animationend', () => heart.remove());
+    return heart;
+}
+function addHeart() {
+    const bg = document.querySelector('.heart-bg');
+    if (bg) {
+        bg.appendChild(createHeart());
+    }
+}
+// 每隔一段时间生成一个新爱心
+setInterval(addHeart, 800);
+// 初始生成几个
+for (let i = 0; i < 5; i++) addHeart();
+</script>
