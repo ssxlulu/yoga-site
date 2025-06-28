@@ -28,8 +28,12 @@ main:
     weight: 60
     hasChildren: true
   - parent: Resources
-    name: Blog
-    url: blog/
+    name: FAQs
+    url: faqs/
+    weight: 70
+  - parent: Resources
+    name: Returns & Exchanges
+    url: refundpolicy/
     weight: 70
   - name: Contact
     url: contact/

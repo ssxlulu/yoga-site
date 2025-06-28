@@ -218,7 +218,7 @@ sections:
   #     view: card
   - block: video-list
     content:
-      title: Follow our yoga teacher all around the world
+      title: Follow Our Yoga Teacher All Around The World
       subtitle: Start your yoga practice with our cat teacher.
       videos:
         - id: vULJxVJD6as
