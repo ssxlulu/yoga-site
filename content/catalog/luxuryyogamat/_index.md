@@ -110,11 +110,48 @@ sections:
             - "Alignment guides for better posture"
             - "Soft, comfortable surface for every pose"
           image: luxury/3.png
+        - title: "Natural Rubber Base, Responsive Support"
+          text: "Crafted with premium natural rubber, this mat delivers instant rebound and stable support every time you move. The 4.5mm thickness cushions your joints, ensuring comfort and safety in every pose."
+          feature_icon: heart
+          features:
+            - "Eco-friendly natural rubber, odor-free"
+            - "Superior resilience for every movement"
+            - "Soft and comfortable, protects your joints"
+          image: luxury/4.png  
     # design:
     #   # Section background color (CSS class)
     #   # css_class: "bg-gray-100 dark:bg-gray-900"
     #   background: 
     #     color: '#FFEFD5'
+
+  - block: gallery
+    content: 
+      images:
+        - src: /media/luxury/1.png
+          alt: 1.png
+        - src: /media/luxury/2.png
+          alt: 2.png
+        - src: /media/luxury/3.png
+          alt: 3.png
+        - src: /media/luxury/4.png
+          alt: 4.png
+        - src: /media/luxury/black_1.png
+          alt: black_1.png
+        - src: /media/luxury/black_2.png
+          alt: black_2.png
+        - src: /media/luxury/blackgrey_1.png
+          alt: blackgrey_1.png
+        - src: /media/luxury/blackgrey_2.png
+          alt: blackgrey_2.png
+        - src: /media/luxury/blue_1.png
+          alt: blue_1.png
+        - src: /media/luxury/blue_2.png
+          alt: blue_2.png
+        - src: /media/luxury/green_1.png
+          alt: green_1.png
+        - src: /media/luxury/green_2.png
+          alt: green_2.png
+
   - block: product-list
     content:
       title: "Buy Our Yoga Mat"

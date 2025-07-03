@@ -15,7 +15,7 @@ sections:
       # text: 🧱 EASY. FREE (OPEN SOURCE). NO-CODE  🧱
       primary_action:
         text: View all
-        url: https://ssxlulu.github.io/yoga-site/#artisticyoagmat
+        url: https://cloud.luluyoga.shop/#luxuryyogamat
         # icon: rocket-launch
       # secondary_action:
         # text: Read the docs
@@ -24,7 +24,7 @@ sections:
         text: "Flash Sale: Up to 20% Off ! "
         link:
           text: "Buy Now"
-          url: https://ssxlulu.github.io/yoga-site/#artisticyoagmat
+          url: https://cloud.luluyoga.shop/#luxuryyogamat
     design:
       spacing:
         padding: [0, 0, 0, 0]
@@ -68,11 +68,11 @@ sections:
       text: Soft, comfy, with alignment guides. Your ideal exercise partner.
       primary_action:
         text: Learn more
-        url: https://ssxlulu.github.io/yoga-site/catalog/luxuryyogamat/
+        url: https://cloud.luluyoga.shop/catalog/luxuryyogamat/
         # icon: rocket-launch
       secondary_action:
         text: Buy
-        url: https://ssxlulu.github.io/yoga-site/catalog/luxuryyogamat/
+        url: https://cloud.luluyoga.shop/catalog/luxuryyogamat/
     design:
       spacing:
         padding: [0, 0, 0, 0]
@@ -92,11 +92,11 @@ sections:
       text: Foldable design makes it easy to carry and store. Durable and eco-friendly.
       primary_action:
         text: Learn more
-        url: https://ssxlulu.github.io/yoga-site/catalog/foldableyogamat/
+        url: https://cloud.luluyoga.shop/catalog/foldableyogamat/
         # icon: rocket-launch
       secondary_action:
         text: Buy
-        url: https://ssxlulu.github.io/yoga-site/catalog/foldableyogamat/
+        url: https://cloud.luluyoga.shop/catalog/foldableyogamat/
     design:
       spacing:
         padding: [0, 0, 0, 0]
