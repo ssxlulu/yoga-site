@@ -71,9 +71,18 @@
     {{ with $subtitle }}<p class="text-center text-lg mb-8">{{ . }}</p>{{ end }}
     <div class="custom-gallery-grid">
       {{ range $images }}
-      <div class="custom-gallery-item">
-        <img src="{{ .src }}" alt="{{ .alt | default "pic" }}" loading="lazy">
-      </div>
+        {{/* 尝试用 Hugo 资源管道处理图片，优先从 assets/media/ 获取 */}}
+        {{ $img := resources.Get (printf "media/%s" .src) }}
+        {{ if $img }}
+          {{ $thumb := $img.Fit "600x400 webp" }}
+          <div class="custom-gallery-item">
+            <img src="{{ $thumb.RelPermalink }}" alt="{{ .alt | default \"pic\" }}" loading="lazy">
+          </div>
+        {{ else }}
+          <div class="custom-gallery-item">
+            <img src="{{ .src }}" alt="{{ .alt | default \"pic\" }}" loading="lazy">
+          </div>
+        {{ end }}
       {{ end }}
     </div>
   </div>
