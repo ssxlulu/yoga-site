@@ -13,19 +13,9 @@
   <style>
     .custom-gallery-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
+      grid-template-columns: repeat(2, 1fr); /* 每行2列 */
+      gap: 1.5rem; /* 间距稍大 */
       grid-auto-flow: dense;
-    }
-    @media (min-width: 640px) {
-      .custom-gallery-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-    @media (min-width: 1024px) {
-      .custom-gallery-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
     }
     .custom-gallery-item {
       overflow: hidden;
@@ -33,37 +23,30 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       transition: box-shadow 0.3s;
       position: relative;
+      height: 18rem; /* 图片项高度更大 */
+    }
+    .custom-gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
     }
     .custom-gallery-item:hover {
       box-shadow: 0 6px 24px rgba(0,0,0,0.16);
     }
-    .custom-gallery-item img {
-      width: 100%;
-      height: 12rem;
-      object-fit: cover;
-      transition: transform 0.3s;
-    }
     .custom-gallery-item:hover img {
       transform: scale(1.07);
     }
-    /* 让第1张图片更大 */
-    .custom-gallery-item:nth-child(1) {
-      grid-column: span 2;
-      grid-row: span 2;
-      height: 100%;
-    }
-    .custom-gallery-item:nth-child(1) img {
-      height: 100%;
-      min-height: 24rem;
-    }
-    /* 让每隔4张图片也变大，错落有致 */
+    /* 取消特殊大图，仅每行两张大图 */
+    .custom-gallery-item:nth-child(1),
     .custom-gallery-item:nth-child(7n+4) {
-      grid-column: span 2;
-      grid-row: span 2;
+      grid-column: span 1;
+      grid-row: span 1;
+      height: 18rem;
     }
+    .custom-gallery-item:nth-child(1) img,
     .custom-gallery-item:nth-child(7n+4) img {
-      height: 100%;
-      min-height: 20rem;
+      min-height: unset;
     }
   </style>
   <div class="container mx-auto py-12">
@@ -74,7 +57,7 @@
         {{/* 尝试用 Hugo 资源管道处理图片，优先从 assets/media/ 获取 */}}
         {{ $img := resources.Get (printf "media/%s" .src) }}
         {{ if $img }}
-          {{ $thumb := $img.Fit "600x400 webp" }}
+          {{ $thumb := $img.Fit "900x600 webp" }}
           <div class="custom-gallery-item">
             <img src="{{ $thumb.RelPermalink }}" alt="{{ .alt | default "pic" }}" loading="lazy">
           </div>
