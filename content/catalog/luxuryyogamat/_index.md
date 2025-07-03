@@ -127,29 +127,21 @@ sections:
   - block: gallery
     content: 
       images:
-        - src: /media/luxury/1.png
-          alt: 1.png
-        - src: /media/luxury/2.png
-          alt: 2.png
-        - src: /media/luxury/3.png
-          alt: 3.png
-        - src: /media/luxury/4.png
-          alt: 4.png
-        - src: /media/luxury/black_1.png
+        - src: luxury/black_1.png
           alt: black_1.png
-        - src: /media/luxury/black_2.png
+        - src: luxury/black_2.png
           alt: black_2.png
-        - src: /media/luxury/blackgrey_1.png
+        - src: luxury/blackgrey_1.png
           alt: blackgrey_1.png
-        - src: /media/luxury/blackgrey_2.png
+        - src: luxury/blackgrey_2.png
           alt: blackgrey_2.png
-        - src: /media/luxury/blue_1.png
+        - src: luxury/blue_1.png
           alt: blue_1.png
-        - src: /media/luxury/blue_2.png
+        - src: luxury/blue_2.png
           alt: blue_2.png
-        - src: /media/luxury/green_1.png
+        - src: luxury/green_1.png
           alt: green_1.png
-        - src: /media/luxury/green_2.png
+        - src: luxury/green_2.png
           alt: green_2.png
 
   - block: product-list
