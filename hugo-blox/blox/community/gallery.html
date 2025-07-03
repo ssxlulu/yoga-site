@@ -76,11 +76,11 @@
         {{ if $img }}
           {{ $thumb := $img.Fit "600x400 webp" }}
           <div class="custom-gallery-item">
-            <img src="{{ $thumb.RelPermalink }}" alt="{{ .alt | default \"pic\" }}" loading="lazy">
+            <img src="{{ $thumb.RelPermalink }}" alt="{{ .alt | default "pic" }}" loading="lazy">
           </div>
         {{ else }}
           <div class="custom-gallery-item">
-            <img src="{{ .src }}" alt="{{ .alt | default \"pic\" }}" loading="lazy">
+            <img src="{{ .src }}" alt="{{ .alt | default "pic" }}" loading="lazy">
           </div>
         {{ end }}
       {{ end }}
