@@ -16,7 +16,7 @@
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
       {{ range $images }}
       <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition">
-        <img src="{{ .src }}" alt="{{ .alt | default \"商品图片\" }}" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+        <img src="{{ .src }}" alt="{{ .alt | default "pic" }}" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
       </div>
       {{ end }}
     </div>
