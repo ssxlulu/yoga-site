@@ -8,15 +8,15 @@ design:
   # Default section spacing
   spacing: "6rem"
 
-links:
-  - icon_pack: fab
-    icon: twitter
-    name: Follow
-    url: 'https://twitter.com/Twitter'
-  - icon_pack: fab
-    icon: medium
-    name: Originally published on Medium
-    url: 'https://medium.com'
+# links:
+#   - icon_pack: fab
+#     icon: twitter
+#     name: Follow
+#     url: 'https://twitter.com/Twitter'
+#   - icon_pack: fab
+#     icon: medium
+#     name: Originally published on Medium
+#     url: 'https://medium.com'
 
 sections:
   - block: hero
