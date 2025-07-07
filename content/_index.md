@@ -25,7 +25,7 @@ sections:
       # text: 🧱 EASY. FREE (OPEN SOURCE). NO-CODE  🧱
       primary_action:
         text: View all
-        url: https://luluyoga.shop/#luxuryyogamat
+        url: https://www.luluyoga.shop/#luxuryyogamat
         # icon: rocket-launch
       # secondary_action:
         # text: Read the docs
@@ -34,7 +34,7 @@ sections:
         text: "Flash Sale: Up to 20% Off ! "
         link:
           text: "Buy Now"
-          url: https://luluyoga.shop/#luxuryyogamat
+          url: https://www.luluyoga.shop/#luxuryyogamat
     design:
       spacing:
         padding: [0, 0, 0, 0]
@@ -54,11 +54,11 @@ sections:
   #     text: Superior cushioning and grip. Compact and easy to store.
   #     primary_action:
   #       text: Learn more
-  #       url: https://luluyoga.shop/catalog/artisticyoagmat/
+  #       url: https://www.luluyoga.shop/catalog/artisticyoagmat/
   #       # icon: rocket-launch
   #     secondary_action:
   #       text: Buy
-  #       url: https://luluyoga.shop/catalog/artisticyoagmat/
+  #       url: https://www.luluyoga.shop/catalog/artisticyoagmat/
   #   design:
   #     spacing:
   #       padding: [0, 0, 0, 0]
@@ -78,11 +78,11 @@ sections:
       text: Soft, comfy, with alignment guides. Your ideal exercise partner.
       primary_action:
         text: Learn more
-        url: https://luluyoga.shop/catalog/luxuryyogamat/
+        url: https://www.luluyoga.shop/catalog/luxuryyogamat/
         # icon: rocket-launch
       secondary_action:
         text: Buy
-        url: https://luluyoga.shop/catalog/luxuryyogamat/
+        url: https://www.luluyoga.shop/catalog/luxuryyogamat/
     design:
       spacing:
         padding: [0, 0, 0, 0]
@@ -102,11 +102,11 @@ sections:
       text: Foldable design makes it easy to carry and store. Durable and eco-friendly.
       primary_action:
         text: Learn more
-        url: https://luluyoga.shop/catalog/foldableyogamat/
+        url: https://www.luluyoga.shop/catalog/foldableyogamat/
         # icon: rocket-launch
       secondary_action:
         text: Buy
-        url: https://luluyoga.shop/catalog/foldableyogamat/
+        url: https://www.luluyoga.shop/catalog/foldableyogamat/
     design:
       spacing:
         padding: [0, 0, 0, 0]

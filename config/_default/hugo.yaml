@@ -4,7 +4,7 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 title: LuluYoga - Yoga Mats from the East # Website name
-baseURL: 'https://luluyoga.shop/' # Website URL
+baseURL: 'https://www.luluyoga.shop/' # Website URL
 
 ############################
 ## PAGE OPTIONS
