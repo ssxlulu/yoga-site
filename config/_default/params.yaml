@@ -38,11 +38,11 @@ header:
       text: ""
       # Logo filename in `assets/media/` folder
       filename: "logo.png"
-    button:
-      enable: true
-      text: "Buy Now"
-      url: "https://hugoblox.com/templates/"
-    show_search: true
+    # button:
+      # enable: true
+      # text: "Buy Now"
+      # url: "https://hugoblox.com/templates/"
+    # show_search: true
     show_theme_chooser: true
     # Show a language chooser (if you have translated your site content)?
     # show_translations: false
