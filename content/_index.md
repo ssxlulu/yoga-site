@@ -23,9 +23,9 @@ sections:
     content:
       title: Peaceful Yoga, Natural Life.
       # text: 🧱 EASY. FREE (OPEN SOURCE). NO-CODE  🧱
-      primary_action:
-        text: View all
-        url: https://www.luluyoga.shop/#luxuryyogamat
+      # primary_action:
+      #   text: View all
+      #   url: https://www.luluyoga.shop/#luxuryyogamat
         # icon: rocket-launch
       # secondary_action:
         # text: Read the docs
