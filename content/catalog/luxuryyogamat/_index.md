@@ -125,7 +125,9 @@ sections:
     #     color: '#FFEFD5'
 
   - block: gallery
-    content: 
+    content:
+      title: "Multiple Colors Available"
+      subtitle: "Choose your favorite color and create your personalized yoga experience"
       images:
         - src: luxury/black_1.png
           alt: black_1.png
